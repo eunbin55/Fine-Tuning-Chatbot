@@ -10,8 +10,8 @@ def create_book(request):
             return redirect('book_list')
     else:
         form = BookForm()
-    return render(request, 'fine_tuning_chatbot/template/create_book.html', {'form': form})
+    return render(request, 'fine_tuning_chatbot/create_book.html', {'form': form})
 
 def book_list(request):
     books = Book.objects.all()
-    return render(request, 'fine_tuning_chatbot/template/book_list.html', {'books': books})
+    return render(request, 'fine_tuning_chatbot/book_list.html', {'books': books})
